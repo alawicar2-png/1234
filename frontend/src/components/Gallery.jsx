@@ -153,7 +153,7 @@ export const Gallery = () => {
           data-testid="gallery-slider-wrapper"
         >
           <TiltWrap>
-            <div className="relative rounded-3xl overflow-hidden glass border-gold/20">
+            <div className="relative rounded-3xl overflow-hidden glass border-gold/20" style={{ position: 'relative' }}>
               <ReactCompareSlider
                 handle={<HandleNode />}
                 position={50}
