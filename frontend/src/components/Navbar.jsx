@@ -20,7 +20,6 @@ export const Navbar = () => {
   const navItems = [
     { id: 'services', label: t.nav.services },
     { id: 'about', label: t.nav.about },
-    { id: 'gallery', label: t.nav.gallery },
     { id: 'contact', label: t.nav.contact },
   ];
 
