@@ -138,10 +138,10 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Websites */}
+          {/* Website */}
           <div>
             <h3 className="text-xs tracking-[0.15em] text-muted-foreground uppercase mb-4">
-              Websites
+              Website
             </h3>
             <ul className="space-y-3 text-sm">
               <li>
@@ -152,16 +152,6 @@ export function Footer() {
                   className="text-foreground hover:text-primary transition-colors"
                 >
                   www.alawicars.ch
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="https://v0-alawi.vercel.app" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-primary transition-colors"
-                >
-                  v0-alawi.vercel.app
                 </a>
               </li>
             </ul>
