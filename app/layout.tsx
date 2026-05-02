@@ -15,25 +15,58 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Alawicars.ch – Exklusive Fahrzeugpflege & Autoservice',
-  description: 'Schweizer Präzision trifft auf Luxus Detailing. Exklusive Fahrzeugpflege und Autoservice für höchste Ansprüche.',
-  keywords: 'Auto Detailing, Fahrzeugpflege, Autopflege Schweiz, Luxus Detailing, Keramikversiegelung, Lackaufbereitung, Alawi Cars',
-  icons: {
-    icon: [
+  title: {
+    default: 'Alawi Cars | Exklusive Fahrzeugpflege & Autoservice Schweiz',
+    template: '%s | Alawi Cars'
+  },
+  description: 'Alawi Cars - Ihr Spezialist für exklusive Fahrzeugpflege in der Schweiz. Professionelles Auto Detailing, Keramikversiegelung, Lackaufbereitung, Ölwechsel und Bremsenservice. Schweizer Präzision für Ihr Fahrzeug.',
+  keywords: 'Alawi Cars, alawicars, Alawicars.ch, Auto Detailing Schweiz, Fahrzeugpflege, Autopflege, Luxus Detailing, Keramikversiegelung, Lackaufbereitung, Ölwechsel, Bremsenservice, Autoservice Schweiz',
+  authors: [{ name: 'Alawi Cars' }],
+  creator: 'Alawi Cars',
+  publisher: 'Alawi Cars',
+  metadataBase: new URL('https://www.alawicars.ch'),
+  alternates: {
+    canonical: 'https://www.alawicars.ch',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'de_CH',
+    url: 'https://www.alawicars.ch',
+    siteName: 'Alawi Cars',
+    title: 'Alawi Cars | Exklusive Fahrzeugpflege & Autoservice Schweiz',
+    description: 'Alawi Cars - Ihr Spezialist für exklusive Fahrzeugpflege in der Schweiz. Professionelles Auto Detailing, Keramikversiegelung und mehr.',
+    images: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/images/logo.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Alawi Cars - Exklusive Fahrzeugpflege',
       },
     ],
-    apple: '/apple-icon.png',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alawi Cars | Exklusive Fahrzeugpflege Schweiz',
+    description: 'Professionelles Auto Detailing und Fahrzeugpflege in der Schweiz.',
+    images: ['/images/logo.jpeg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+  },
+  icons: {
+    icon: '/images/logo.jpeg',
+    apple: '/images/logo.jpeg',
   },
 }
 
