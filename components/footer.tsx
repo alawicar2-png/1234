@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
 
 function TikTokIcon({ className }: { className?: string }) {
@@ -37,23 +38,23 @@ function FacebookIcon({ className }: { className?: string }) {
 
 const socialLinks = [
   {
-    name: "TikTok",
-    href: "https://www.tiktok.com/@alawi_cars",
-    icon: TikTokIcon,
-  },
-  {
     name: "Instagram",
-    href: "https://www.instagram.com/alawicars",
+    href: "https://www.instagram.com/alawicars.ch?igsh=M2h0d3FsbzhneGs3",
     icon: InstagramIcon,
   },
   {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@alawi_cars.ch?_r=1&_t=ZG-962NOLcOva5",
+    icon: TikTokIcon,
+  },
+  {
     name: "YouTube",
-    href: "https://youtube.com/@alawicars",
+    href: "https://youtube.com/@alawicars?si=tQwIKlocdI6wcorb",
     icon: YouTubeIcon,
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/share/1Crw5BTKTv/",
+    href: "https://www.facebook.com/share/1Crw5BTKTv/?mibextid=wwXIfr",
     icon: FacebookIcon,
   },
 ]
@@ -67,14 +68,21 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-4 group">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary text-primary font-semibold group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                A
-              </div>
+            <Link href="https://www.alawicars.ch" className="flex items-center gap-3 mb-4 group">
+              <Image
+                src="/images/logo.jpeg"
+                alt="Alawi Cars Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full object-cover"
+              />
               <div className="flex flex-col">
                 <span className="text-sm font-semibold tracking-wide">
                   <span className="text-foreground">ALAWI</span>
                   <span className="text-primary">CARS</span>
+                </span>
+                <span className="text-[10px] tracking-[0.2em] text-muted-foreground">
+                  alawicars.ch
                 </span>
               </div>
             </Link>
@@ -128,6 +136,35 @@ export function Footer() {
             <p className="text-sm text-foreground">
               Schweiz
             </p>
+          </div>
+
+          {/* Websites */}
+          <div>
+            <h3 className="text-xs tracking-[0.15em] text-muted-foreground uppercase mb-4">
+              Websites
+            </h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a 
+                  href="https://www.alawicars.ch" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  www.alawicars.ch
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://v0-alawi.vercel.app" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary transition-colors"
+                >
+                  v0-alawi.vercel.app
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

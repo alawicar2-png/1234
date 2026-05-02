@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Alawi Cars – Exklusive Fahrzeugpflege & Autoservice',
+  title: 'Alawicars.ch – Exklusive Fahrzeugpflege & Autoservice',
   description: 'Schweizer Präzision trifft auf Luxus Detailing. Exklusive Fahrzeugpflege und Autoservice für höchste Ansprüche.',
-  keywords: 'Auto Detailing, Fahrzeugpflege, Autopflege Schweiz, Luxus Detailing, Keramikversiegelung, Lackaufbereitung',
+  keywords: 'Auto Detailing, Fahrzeugpflege, Autopflege Schweiz, Luxus Detailing, Keramikversiegelung, Lackaufbereitung, Alawi Cars',
   icons: {
     icon: [
       {

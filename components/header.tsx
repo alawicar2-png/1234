@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
@@ -39,10 +40,14 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full border border-primary text-primary font-semibold group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-              A
-            </div>
+          <Link href="https://www.alawicars.ch" className="flex items-center gap-3 group">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Alawi Cars Logo"
+              width={48}
+              height={48}
+              className="h-12 w-12 rounded-full object-cover"
+            />
             <div className="flex flex-col">
               <span className="text-sm font-semibold tracking-wide">
                 <span className="text-foreground">ALAWI</span>
