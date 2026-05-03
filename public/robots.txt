@@ -1,0 +1,6 @@
+# Alawi Cars - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.alawicars.ch/sitemap.xml
