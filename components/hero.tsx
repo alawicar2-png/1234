@@ -43,7 +43,8 @@ export function Hero() {
             alt="Alawi Cars - Mobile Fahrzeugpflege und Autoservice Schweiz"
             width={112}
             height={112}
-            className="h-auto w-24 md:w-28 object-contain drop-shadow-2xl"
+            className="w-24 md:w-28 h-auto object-contain drop-shadow-2xl"
+            style={{ height: 'auto' }}
             priority
             itemProp="logo"
           />

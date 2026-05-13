@@ -90,7 +90,8 @@ export function ContactCTA() {
                   alt="Alawi Cars Logo"
                   width={56}
                   height={56}
-                  className="h-14 w-14 object-contain"
+                  className="w-14 h-auto object-contain"
+                  style={{ height: 'auto' }}
                   itemProp="logo"
                 />
                 <div>

@@ -74,7 +74,8 @@ export function Footer() {
                 alt="Alawi Cars - Professionelle Fahrzeugpflege und Autoservice in der Schweiz"
                 width={56}
                 height={56}
-                className="h-14 w-14 object-contain"
+                className="w-14 h-auto object-contain"
+                style={{ height: 'auto' }}
               />
               <div className="flex flex-col">
                 <span className="text-sm font-semibold tracking-wide">
