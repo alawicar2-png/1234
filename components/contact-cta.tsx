@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { MessageCircle, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
@@ -85,15 +84,9 @@ export function ContactCTA() {
             <div className="bg-card/50 backdrop-blur-md rounded-2xl border border-border/50 p-8 lg:p-10">
               {/* Company Info */}
               <div className="flex items-center gap-4 pb-8 border-b border-border/50" itemScope itemType="https://schema.org/Organization">
-                <Image
-                  src="/images/alawi-cars-logo.png"
-                  alt="Alawi Cars Logo"
-                  width={56}
-                  height={56}
-                  className="w-14 h-auto object-contain"
-                  style={{ height: 'auto' }}
-                  itemProp="logo"
-                />
+                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary text-primary font-bold text-xl">
+                  A
+                </div>
                 <div>
                   <div className="font-semibold text-foreground text-lg" itemProp="name">Alawi Cars</div>
                   <div className="text-xs tracking-[0.15em] text-muted-foreground uppercase">

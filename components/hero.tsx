@@ -33,27 +33,15 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32">
-        {/* Logo and Badge - Fade in from top */}
+        {/* Badge - Fade in from top */}
         <div 
-          className="flex items-center gap-6 mb-8 animate-fade-in-down"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-background/50 backdrop-blur-sm mb-8 animate-fade-in-down"
           style={{ animationDelay: "0.2s" }}
         >
-          <Image
-            src="/images/alawi-cars-logo.png"
-            alt="Alawi Cars - Mobile Fahrzeugpflege und Autoservice Schweiz"
-            width={112}
-            height={112}
-            className="w-24 md:w-28 h-auto object-contain drop-shadow-2xl"
-            style={{ height: 'auto' }}
-            priority
-            itemProp="logo"
-          />
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-background/50 backdrop-blur-sm">
-            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs tracking-[0.2em] text-primary uppercase">
-              {t("hero.badge")}
-            </span>
-          </div>
+          <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+          <span className="text-xs tracking-[0.2em] text-primary uppercase">
+            {t("hero.badge")}
+          </span>
         </div>
 
         {/* Headline - Slide in from left */}

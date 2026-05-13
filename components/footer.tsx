@@ -70,12 +70,11 @@ export function Footer() {
           <div>
             <Link href="https://www.alawicars.ch" className="flex items-center gap-3 mb-4 group">
               <Image
-                src="/images/alawi-cars-logo.png"
-                alt="Alawi Cars - Professionelle Fahrzeugpflege und Autoservice in der Schweiz"
-                width={56}
-                height={56}
-                className="w-14 h-auto object-contain"
-                style={{ height: 'auto' }}
+                src="/images/logo.jpeg"
+                alt="Alawi Cars Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12 rounded-full object-cover"
               />
               <div className="flex flex-col">
                 <span className="text-sm font-semibold tracking-wide">
