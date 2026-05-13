@@ -45,7 +45,13 @@ export function Services() {
   ]
 
   return (
-    <section id="dienstleistungen" className="py-24 lg:py-32 bg-secondary/30 overflow-hidden">
+    <section 
+      id="dienstleistungen" 
+      className="py-24 lg:py-32 bg-secondary/30 overflow-hidden"
+      aria-labelledby="services-heading"
+      itemScope
+      itemType="https://schema.org/Service"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div 
@@ -60,7 +66,11 @@ export function Services() {
               {t("services.label")}
             </span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
+          <h2 
+            id="services-heading"
+            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance"
+            itemProp="name"
+          >
             {t("services.title")}
           </h2>
         </div>
@@ -103,7 +113,11 @@ function ServiceCard({
     >
       <TiltCard className="h-full">
         {/* Glassmorphism Card */}
-        <div className="relative h-full p-8 rounded-2xl bg-card/50 backdrop-blur-md border border-border/50 hover:border-primary/30 transition-all duration-300 group overflow-hidden">
+        <div 
+          className="relative h-full p-8 rounded-2xl bg-card/50 backdrop-blur-md border border-border/50 hover:border-primary/30 transition-all duration-300 group overflow-hidden"
+          itemScope
+          itemType="https://schema.org/Service"
+        >
           {/* Glow effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
@@ -111,10 +125,10 @@ function ServiceCard({
             <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110">
               <Icon className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-3">
+            <h3 className="text-xl font-semibold text-foreground mb-3" itemProp="name">
               {t(service.titleKey)}
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed" itemProp="description">
               {t(service.descriptionKey)}
             </p>
           </div>

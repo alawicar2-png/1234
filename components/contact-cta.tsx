@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { MessageCircle, Phone, Mail, MapPin, ArrowUpRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
@@ -31,13 +32,19 @@ export function ContactCTA() {
     {
       icon: MapPin,
       labelKey: "cta.location",
-      value: "Schweiz",
+      value: "Mobiler Service in der ganzen Schweiz",
       href: "#"
     }
   ]
 
   return (
-    <section id="kontakt" className="py-24 lg:py-32 bg-secondary/30 overflow-hidden">
+    <section 
+      id="kontakt" 
+      className="py-24 lg:py-32 bg-secondary/30 overflow-hidden"
+      aria-labelledby="contact-heading"
+      itemScope
+      itemType="https://schema.org/ContactPage"
+    >
       <div ref={sectionRef} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left Content */}
@@ -50,7 +57,10 @@ export function ContactCTA() {
                 {t("cta.label")}
               </span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance">
+            <h2 
+              id="contact-heading"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance"
+            >
               {t("cta.title")}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-md mb-8">
@@ -74,12 +84,17 @@ export function ContactCTA() {
           }`}>
             <div className="bg-card/50 backdrop-blur-md rounded-2xl border border-border/50 p-8 lg:p-10">
               {/* Company Info */}
-              <div className="flex items-center gap-4 pb-8 border-b border-border/50">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary text-primary font-bold text-xl">
-                  A
-                </div>
+              <div className="flex items-center gap-4 pb-8 border-b border-border/50" itemScope itemType="https://schema.org/Organization">
+                <Image
+                  src="/images/alawi-cars-logo.png"
+                  alt="Alawi Cars Logo"
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 object-contain"
+                  itemProp="logo"
+                />
                 <div>
-                  <div className="font-semibold text-foreground text-lg">Alawi Cars</div>
+                  <div className="font-semibold text-foreground text-lg" itemProp="name">Alawi Cars</div>
                   <div className="text-xs tracking-[0.15em] text-muted-foreground uppercase">
                     Exklusive Fahrzeugpflege & Autoservice
                   </div>

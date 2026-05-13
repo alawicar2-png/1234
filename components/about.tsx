@@ -9,7 +9,11 @@ export function About() {
   const { ref: sectionRef, isVisible } = useScrollAnimation({ threshold: 0.2 })
 
   return (
-    <section id="ueber-uns" className="py-24 lg:py-32 overflow-hidden">
+    <section 
+      id="ueber-uns" 
+      className="py-24 lg:py-32 overflow-hidden"
+      aria-labelledby="about-heading"
+    >
       <div ref={sectionRef} className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
@@ -47,7 +51,10 @@ export function About() {
               </span>
             </div>
 
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight text-balance">
+            <h2 
+              id="about-heading"
+              className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight text-balance"
+            >
               {t("about.title")}
             </h2>
 

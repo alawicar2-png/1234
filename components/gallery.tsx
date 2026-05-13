@@ -34,7 +34,11 @@ export function Gallery() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.3 })
 
   return (
-    <section id="galerie" className="py-24 lg:py-32 overflow-hidden">
+    <section 
+      id="galerie" 
+      className="py-24 lg:py-32 overflow-hidden"
+      aria-labelledby="gallery-heading"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div 
@@ -49,7 +53,10 @@ export function Gallery() {
               {t("gallery.label")}
             </span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
+          <h2 
+            id="gallery-heading"
+            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance"
+          >
             {t("gallery.title")}
           </h2>
         </div>

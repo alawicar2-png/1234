@@ -9,7 +9,12 @@ export function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-start overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center justify-start overflow-hidden"
+      aria-labelledby="hero-heading"
+      itemScope
+      itemType="https://schema.org/LocalBusiness"
+    >
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0">
         <Image
@@ -28,21 +33,34 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-32">
-        {/* Badge - Fade in from top */}
+        {/* Logo and Badge - Fade in from top */}
         <div 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-background/50 backdrop-blur-sm mb-8 animate-fade-in-down"
+          className="flex items-center gap-6 mb-8 animate-fade-in-down"
           style={{ animationDelay: "0.2s" }}
         >
-          <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs tracking-[0.2em] text-primary uppercase">
-            {t("hero.badge")}
-          </span>
+          <Image
+            src="/images/alawi-cars-logo.png"
+            alt="Alawi Cars - Mobile Fahrzeugpflege und Autoservice Schweiz"
+            width={112}
+            height={112}
+            className="h-auto w-24 md:w-28 object-contain drop-shadow-2xl"
+            priority
+            itemProp="logo"
+          />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-background/50 backdrop-blur-sm">
+            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs tracking-[0.2em] text-primary uppercase">
+              {t("hero.badge")}
+            </span>
+          </div>
         </div>
 
         {/* Headline - Slide in from left */}
         <h1 
+          id="hero-heading"
           className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
+          itemProp="name"
         >
           <span className="text-foreground">Alawi</span>
           <span className="text-primary ml-4">Cars</span>
@@ -65,9 +83,13 @@ export function Hero() {
         <p 
           className="max-w-lg text-muted-foreground mt-8 text-lg leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "0.8s" }}
+          itemProp="description"
         >
           {t("hero.description")}
         </p>
+        {/* Hidden local SEO text */}
+        <meta itemProp="areaServed" content="Switzerland, Zürich, Winterthur, 50km radius" />
+        <meta itemProp="serviceType" content="Car Detailing, Fahrzeugpflege, Mobile Car Wash, Oil Change, Brake Service, Tire Service, Car Transport" />
 
         {/* CTA Button */}
         <div 
